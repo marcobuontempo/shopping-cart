@@ -1,6 +1,7 @@
 // Initial Webpage Functions
 // Load/render cart on page refresh/load
 cart = JSON.parse(localStorage.getItem("cart"));
+// cart = JSON.parse(localStorage.getItem("cart"));
 renderCart();
 
 // Render products page
