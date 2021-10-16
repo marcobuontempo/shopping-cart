@@ -36,24 +36,24 @@ const createCartHtml = (productCode, productName, productQuantity, productPrice,
 
 // Display Cart Items on screen
 const renderCart = () => {  
-    // Generate HTML for each product and join
+    // Generate HTML for each cart item and join
     let cartToRender = "";
-    let totalPrice = 0;
     cart.forEach((item) => {
         const product = createCartHtml(item.productCode, item.productName, item.productQuantity, item.productPrice, item.productTotal);
         cartToRender += product;
-        // Adds to total price
-        totalPrice += Number(item.productTotal);
     });
-    
-    // Set HTML to render products
+    // Use created HTML to render products using DOM
     document.getElementById("shopping-cart-body").innerHTML = cartToRender;
-    
-    // Cart is Empty message if no items
+    // Display 'Cart is Empty' message if no items
     if(cart.length == 0) {
         document.getElementById("shopping-cart-body").innerHTML = '<tr><td colspan="5">Cart is empty</td></tr>'
     };
 
+    // Calculate and show total cart price
+    let totalPrice = 0;
+    cart.forEach((item) => {
+        totalPrice += Number(item.productTotal)
+    })
     document.getElementById("cart-total-price").innerHTML = `$${totalPrice.toFixed(2)}`;
 
     // Update quantity display on cart menu

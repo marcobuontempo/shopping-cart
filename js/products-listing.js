@@ -13,14 +13,14 @@ const addProduct = (productCode, productImage, productName, productPrice) => {
 }
 
 // Add Products
-addProduct("1","./images/products/product-1.jfif","Sneakers","129.99")
-addProduct("2","./images/products/product-2.jfif","Playstation Controller","59.99")
-addProduct("3","./images/products/product-3.jfif","Wrist Watch","209.95")
-addProduct("4","./images/products/product-4.jfif","Drone","399.99")
-addProduct("5","./images/products/product-5.jfif","T-shirt","24.99")
-addProduct("6","./images/products/product-6.jfif","Keyboard","193.50")
-addProduct("7","./images/products/product-7.jfif","Apple","00.37")
-addProduct("8","./images/products/product-8.jfif","Beer Bottle","8.75")
+addProduct("1","/images/products/product-1.jfif","Sneakers","129.99")
+addProduct("2","/images/products/product-2.jfif","Playstation Controller","59.99")
+addProduct("3","/images/products/product-3.jfif","Wrist Watch","209.95")
+addProduct("4","/images/products/product-4.jfif","Drone","399.99")
+addProduct("5","/images/products/product-5.jfif","T-shirt","24.99")
+addProduct("6","/images/products/product-6.jfif","Keyboard","193.50")
+addProduct("7","/images/products/product-7.jfif","Apple","00.37")
+addProduct("8","/images/products/product-8.jfif","Beer Bottle","8.75")
 
 
 // Function to generate product HTML

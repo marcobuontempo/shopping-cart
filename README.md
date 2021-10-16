@@ -32,7 +32,7 @@
     2. `addProduct()` is a factory function that creates an object (containing the details of the product to display), then pushes to the `products` array
     3. We can add products by running `addProduct()`, in products-listings.js, with the item's details as the arguments. 
     <br/>For example:<br/>
-    `addProduct("1","./images/products/product-1.jfif","Sneakers","129.99")`
+    `addProduct("1","/images/products/product-1.jfif","Sneakers","129.99")`
     4. `createProductHtml()` creates a string of HTML code to display a product. It uses template literals, and also has a `data-product-code` attribute so we can identify/target the product displayed on-screen
     5. `renderProducts()` creates the HTML to render all of our products:
         - loops through the `products` array
