@@ -114,6 +114,9 @@ document.getElementById("shopping-cart").addEventListener("click", (event) => {
 
 // Show Cart when click "Cart"
 const hideCart = () => {
+    // Make sure cart info is up-to-date
+    renderCart();
+    // DOM manipulation to show/hide elements
     document.getElementById("cart-title").style.display = "none";
     document.getElementById("cart-quantity-label").style.display = "none";
     document.getElementById("minimise-cart").style.display = "block";
@@ -121,8 +124,10 @@ const hideCart = () => {
 };
 document.getElementById("cart-title").addEventListener("click", hideCart);
 
+
 // Hide Cart when click "Minimise"
 const showCart = () => {
+    // DOM manipulation to show/hide elements
     document.getElementById("cart-title").style.display = "block";
     document.getElementById("cart-quantity-label").style.display = "block";
     document.getElementById("minimise-cart").style.display = "none";

@@ -49,9 +49,9 @@
     4. `renderCart()` creates the HTML to render all of our cart items:
         - loops through our `cart` array
         - passes each object's properties (e.g. product code, product name, etc.) to `createCartHtml()`
-        - updates the `totalPrice` after each loop of item in `cart` array
         - joins all of the created HTML to 1 string
         - uses DOM manipulation to change the innerHTML of the `shopping-cart-body` to the generated cart
+        - loops through all of the `cart` items, totals their value, and adds to cart's display
         - displays "Cart is empty" if no items in `cart` array
 <br/><br/>
 
