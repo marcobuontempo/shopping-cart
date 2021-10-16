@@ -66,6 +66,7 @@ body {
 
 .title {
     color: whitesmoke;
+    width: 100%;
     font-size: 3rem;
     text-align: center;
     text-transform: uppercase;
