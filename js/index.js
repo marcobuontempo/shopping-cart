@@ -1,8 +1,10 @@
 // Initial Webpage Functions
 // Load/render cart on page refresh/load
-cart = JSON.parse(localStorage.getItem("cart"));
-// cart = JSON.parse(localStorage.getItem("cart"));
-renderCart();
+if(localStorage.getItem("cart")) {
+    const loadCart = localStorage.getItem("cart");
+    cart = JSON.parse(loadCart);
+    renderCart();
+}
 
 // Render products page
 renderProducts();
