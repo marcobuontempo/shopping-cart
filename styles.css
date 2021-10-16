@@ -123,6 +123,7 @@ h1.product-element {
 
 .product-element input[type="number"] {
     text-align: left;
+    width: 35px;
 }
 
 input[type="button"].product-element {
@@ -193,6 +194,19 @@ tbody.shopping-cart-row {
     text-align: center;
 }
 
+.shopping-cart-row input[type=number] {
+    background-color: black;
+    width: 35px;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.shopping-cart-row input[type=number]::-webkit-inner-spin-button {
+    opacity: 1;
+    filter: invert();
+}
+
 .cart-update, .cart-remove {
     font-weight: bold;
 }
@@ -200,10 +214,6 @@ tbody.shopping-cart-row {
 .cart-update:hover, .cart-remove:hover {
     cursor: pointer;
     color: violet;
-}
-
-input[type="number"] {
-    width: 35px;
 }
 
 #cart-total-price {
