@@ -8,7 +8,7 @@
 <br/><br/>
 
 ## **Setup/Installation**
-- Web App is deployed at GitHub Pages (https://marcobuontempo.github.io/shopping-cart/shopping-cart), so can be viewed directly in your browser
+- Web App is deployed at GitHub Pages (https://marcobuontempo.github.io/shopping-cart/), so can be viewed directly in your browser
 - ALternatively, download the source code, open in VS Code, and you can view it in your browser using the extension "Live Server" (https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
 - Use a modern browser (i.e. Google Chrome) for best experience
 <br/><br/>

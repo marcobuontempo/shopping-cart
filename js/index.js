@@ -24,7 +24,7 @@ document.getElementById("products-listing").addEventListener("click", (event) =>
         
         // Validate quantity is more than 0 
         if(targetProductQuantity < 1) {
-            window.alert("Please enter a quantity of more than 1")
+            window.alert("Please enter a quantity of more than 1");
         } else {
             // Loop through 'products' array to compare to find the product that user wants to add to cart
             products.forEach((listingItem) => {
@@ -37,18 +37,18 @@ document.getElementById("products-listing").addEventListener("click", (event) =>
                                 cartItem.productTotal = Number((cartItem.productPrice*cartItem.productQuantity)).toFixed(2);
                                 needToAddProduct = false;
                             }
-                        })
+                        });
                         // Otherwise, add new product to cart
                         if(needToAddProduct) {
                             addToCart(
                                 listingItem.productCode, 
                                 listingItem.productName, 
                                 targetProductQuantity, 
-                                listingItem.productPrice)
-                        }
-                }
-            })
-        }
+                                listingItem.productPrice);
+                        };
+                };
+            });
+        };
 
         // Reset quantity field to 1
         inputQuantity.value = 1;
@@ -56,7 +56,7 @@ document.getElementById("products-listing").addEventListener("click", (event) =>
         // Re-render to update cart
         renderCart();
     }
-})
+});
 
 
 // Update Cart Button
@@ -80,14 +80,14 @@ document.getElementById("shopping-cart").addEventListener("click", (event) => {
                 if(targetProductCode == cartItem.productCode) {
                     cartItem.productQuantity = Number(targetProductQuantity);
                     cartItem.productTotal = Number((cartItem.productPrice*cartItem.productQuantity)).toFixed(2);
-                }
-            })
-        }
+                };
+            });
+        };
 
         // Re-render to update cart
         renderCart();
-    }
-})
+    };
+});
 
 
 // Remove Cart Button
@@ -102,13 +102,13 @@ document.getElementById("shopping-cart").addEventListener("click", (event) => {
             // Remove product from cart array
             if(targetProductCode == cartItem.productCode) {
                 cart.splice(index, 1);
-            }
-        })
+            };
+        });
 
         // Re-render to update cart
         renderCart();
-    }
-})
+    };
+});
 
 
 
@@ -132,5 +132,5 @@ const showCart = () => {
     document.getElementById("cart-quantity-label").style.display = "block";
     document.getElementById("minimise-cart").style.display = "none";
     document.getElementById("shopping-cart-table").style.display = "none";
-}
+};
 document.getElementById("minimise-cart").addEventListener("click", showCart);

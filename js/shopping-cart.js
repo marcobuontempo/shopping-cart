@@ -6,7 +6,7 @@ const cartQuantity = () => {
     let total = 0;
     cart.forEach((item) => {
         total += item.productQuantity;
-    })
+    });
     return total;
 };
 
@@ -19,7 +19,7 @@ const addToCart = (productCode, productName, productQuantity, productPrice) => {
         productPrice,
         productTotal: (productPrice*productQuantity).toFixed(2)
     };
-    cart.push(product)
+    cart.push(product);
 };
 
 
@@ -53,7 +53,7 @@ const renderCart = () => {
     let totalPrice = 0;
     cart.forEach((item) => {
         totalPrice += Number(item.productTotal)
-    })
+    });
     document.getElementById("cart-total-price").innerHTML = `$${totalPrice.toFixed(2)}`;
 
     // Update quantity display on cart menu
@@ -61,8 +61,8 @@ const renderCart = () => {
     document.getElementById("cart-quantity-label").innerHTML = totalQuantity > 0 ? totalQuantity : "";
 
     // Save cart to local storage
-    localStorage.setItem('cart', JSON.stringify(cart))
-}
+    localStorage.setItem('cart', JSON.stringify(cart));
+};
 
 
 
