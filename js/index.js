@@ -112,9 +112,8 @@ document.getElementById("shopping-cart").addEventListener("click", (event) => {
 });
 
 
-
 // Show Cart when click "Cart"
-const hideCart = () => {
+const showCart = () => {
     // Make sure cart info is up-to-date
     renderCart();
     // DOM manipulation to show/hide elements
@@ -123,15 +122,26 @@ const hideCart = () => {
     document.getElementById("minimise-cart").style.display = "block";
     document.getElementById("shopping-cart-table").style.display = "block";
 };
-document.getElementById("cart-title").addEventListener("click", hideCart);
+document.getElementById("cart-title").addEventListener("click", showCart);
 
 
 // Hide Cart when click "Minimise"
-const showCart = () => {
+const hideCart = () => {
     // DOM manipulation to show/hide elements
     document.getElementById("cart-title").style.display = "block";
     document.getElementById("cart-quantity-label").style.display = "block";
     document.getElementById("minimise-cart").style.display = "none";
     document.getElementById("shopping-cart-table").style.display = "none";
 };
-document.getElementById("minimise-cart").addEventListener("click", showCart);
+document.getElementById("minimise-cart").addEventListener("click", hideCart);
+
+
+// "Clear Cart" contents
+const clearCart = () => {
+    if(window.confirm("Delete cart contents?")){
+    cart = [];
+    hideCart();
+    renderCart();
+    };
+};
+document.getElementById("clear-cart").addEventListener("click", clearCart);
