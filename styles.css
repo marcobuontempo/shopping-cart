@@ -287,7 +287,7 @@ tbody.shopping-cart-row {
     #shopping-cart table {
         background-color: black;
         border: 1px solid white;
-        display: flex;
+        /* display: flex; */
         align-content: center;
     }
 
@@ -313,7 +313,7 @@ tbody.shopping-cart-row {
     }
 
     tbody.shopping-cart-row td {
-        background-color: rgba(238, 130, 238, 0.3);
+        background-color: rgba(146, 146, 146, 0.2);
     }
 
     tfoot.shopping-cart-row {
