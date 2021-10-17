@@ -156,7 +156,7 @@ input[type="button"].product-element:hover {
     background-color: rgba(0, 0, 0, 0.9);
     display: none;
     overflow-y: scroll;
-    height: 70vh;
+    max-height: 70vh;
 }
 
 #cart-title {
